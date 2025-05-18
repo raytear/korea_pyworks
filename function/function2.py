@@ -44,3 +44,49 @@ for i in v:
 
 print("합계:", total)
 '''
+
+# 리스트를 매개변수로 새로운 변수 만들기
+def times(a):
+    a2 = [] #복사할 빈 리스트 생성
+    for i in a:
+        a2.append(4 * i)
+    return a2
+
+# 리스트를 4의 배수로 저장
+arr = [1, 2, 3, 4]
+# 함수 호출
+arr2 = times(arr)
+print(arr2)
+
+# 1 ~ n까지 합계 계산하기
+'''
+    sum_n(n) - 덧셈 n번 → 0(n) : Big 0 표기
+    sum_n2(n) - 덧셈, 곱셈, 나눗셈(총 3번) → 0(1)
+'''
+def sum_n(n):
+    total = 0
+    for i in range(1, n+1):
+        total += i
+    return total
+
+def sum_n2(x):
+    total = (x * (x + 1)) / 2
+    return int(total)    
+    
+# 호출
+print("합계1:", sum_n(10))
+print("합계2:", sum_n2(10))
+
+# 내장 함수 - sum()
+v = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print("합계3:", sum(v))
+
+
+"""
+n = 100
+total = 0
+for i in range(1, n + 1):
+    total += i
+    # print(i)
+    print("합계:", total)
+"""
