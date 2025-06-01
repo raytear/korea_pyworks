@@ -102,10 +102,53 @@ if age >= 20 and age <= 65:
 else:
     print("하반기 일정")
 """
-
+'''
 # 실습 - 문자열 처리
 x = input("Happy Birthday!!를 입력하세요: ")
 x = x.capitalize() #문자열의 맨 앞 글자를 대문자로 변경해줌
 print(x) #Happy birthday!!
 y = x.split() #공백문자로 구분 - (' ') or () 사용
 print(y) #['Happy', 'birthday!!']
+'''
+
+# 리스트
+# 문자열 → 1차원 리스트
+
+car = "나는 전기차를 구매했어요"
+
+# 인덱싱과 슬라이싱
+print(car[0]) #나
+print(car[3]) #전
+print(car[3:6]) #전기차
+
+# 전기차를 수소차로 변경
+car = car.replace("전기차", "수소차")
+print(car)
+
+# 찾기 함수
+print(car.find("구매했어요")) #8
+print(car.find("판매했어요")) #-1
+
+# 공백 문자 제거 - strip()
+str = " Hi~ han."
+print(str.strip()) #양쪽 공백 제거
+print(str.lstrip()) #왼쪽 공백 제거
+
+str2 = "Hi~ han. "
+print(str2.strip())
+print(str2.rstrip()) #오른쪽 공백 제거
+
+# 실습 문제
+# python-programming
+arr_str = input("Input string: ").split('-')
+arr_len = int(input("Input number: "))
+arr_val = list(range(0, arr_len, 2))
+arr_val.remove(4)
+
+print(arr_str) # ['python', 'programming']
+# print(arr_val) # range(0, 10, 2) → [0, 2, 4, 6, 8]
+print(arr_val) # [0, 2, 6, 8]
+
+print(arr_str[1].find('e')) # -1
+print(arr_val[2]) # 6
+print(arr_str[1].find('e') + arr_val[2]) # 5
