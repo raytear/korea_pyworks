@@ -17,7 +17,7 @@ for i in range(2, 10):
 f.close()
 
 # 구구단 파일 읽기
-f = open("c:/pyfile/gugudan.txt", "r")
+f = open("c:/pyfil/gugudan.txt", "r")
 
 gugudan  = f.read()
 print(gugudan)
