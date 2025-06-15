@@ -60,4 +60,5 @@ def main():
         except ValueError:
             print("숫자를 입력해주세요.")
 
-main() #실행 함수 호출
+if __name__ == "__main__":
+    main() #실행 함수 호출
